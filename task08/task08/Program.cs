@@ -11,17 +11,16 @@ namespace task08
         static void Main(string[] args)
         {
             Console.WriteLine("Введите x");
-            double x = int.Parse(Console.ReadLine());
-            FunctionEvaluation(ref x);
-            Console.WriteLine("F(x) = " + FunctionEvaluation(ref x));
+            double x = double.Parse(Console.ReadLine());
+            Console.WriteLine("F(x) = " + FunctionEvaluation(x));
             Console.ReadKey();
         }
     
-        static double FunctionEvaluation(ref double x)
+        static double FunctionEvaluation(double x)
         {
             if ((Math.Abs(x)) < (Math.PI / 4))
             { 
-                return Math.Atan(x) * 180 / Math.PI;
+                return Math.Atan(x);
             }
             else if (x >= (Math.PI / 4))
             {
